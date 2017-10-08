@@ -152,7 +152,7 @@ def busca_palavra_secreta():
     return palavraSecreta
 
 def inicializa_forca(palavraSecreta):
-    return ['_' for letra in palavraSecreta] # um laco dentro da inicializacao da lista. Vai incluir o _ para cada letrad a palavra
+    return ['_' for letra in palavraSecreta] # um laco dentro da inicializacao da lista. Vai incluir o _ para cada letra da palavra
 
 
 # esse if vai identificar se o arquivo foi importado em algum outro arquivo ou se está sendo executado diretamente no console

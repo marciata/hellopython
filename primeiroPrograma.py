@@ -7,7 +7,12 @@ rodada = 1
 #while (rodada <= maximoTentativas) :
 for rodada in range(1, maximoTentativas + 1) :
     print("Tentativa {} de {}".format(rodada, maximoTentativas))
-    chute = int(input("Adivinhe o valor: "))
+    try:
+        chute = int(input("Adivinhe o valor: "))
+    except ValueError:
+        print("Voce deve digitar um numero")
+        continue
+
     if (chute <=0 or chute > 10) :
         print("O valor deve ser entre 1 e 10")
         continue;
