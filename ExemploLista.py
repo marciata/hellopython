@@ -55,6 +55,12 @@ def deletando_elem():
     del lista1[2]
     print(lista1)
 
+def atribuicao_multipla():
+    lista1 = [1,2,3]
+    # os elementos da lista sao atribuidos as variaveis na ordem. Se tiver menos elementos que atributos, erro
+    a, b, c = lista1
+    print('a=' + str(a), 'b=' + str(b), 'c=' + str(c))
+
 lista_montada = monta_lista(10)
 print_lista(lista_montada)
 print_primeiro_elemento(lista_montada)
@@ -69,3 +75,4 @@ print('novo elemento' not in lista_montada)
 concatena_listas()
 multiplica_listas()
 deletando_elem()
+atribuicao_multipla()
