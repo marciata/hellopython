@@ -1,11 +1,13 @@
 def monta_lista(totalElementos):
     lista = []
     for i in range(totalElementos):
-        # inclusao pode ser via funcao insert
+        # inclusao pode ser via metodo insert = para quando inserir em posicao especifica
         #lista.insert(i, 'elem' + str(i))
         elem = 'elem' + str(i)
         # ou concatenacao de listas
-        lista = lista + [elem]
+#        lista = lista + [elem]
+        # ou via metodo append (elemento é adicionado por ultimo na lista
+        lista.append(elem)
     return lista
 
 def print_lista(lista):
@@ -52,7 +54,10 @@ def multiplica_listas():
 
 def deletando_elem():
     lista1 = [1,2,3,4]
+    # remocao pode ser via del
     del lista1[2]
+    # ou via remove = nesse caso remove por valor
+    lista1.remove(4)
     print(lista1)
 
 def atribuicao_multipla():
@@ -60,6 +65,20 @@ def atribuicao_multipla():
     # os elementos da lista sao atribuidos as variaveis na ordem. Se tiver menos elementos que atributos, erro
     a, b, c = lista1
     print('a=' + str(a), 'b=' + str(b), 'c=' + str(c))
+
+def ordenacao_lista():
+    lista1 = [2,6,4,3,9,1,8]
+    # metodo sort pode ser em int ou strings. nao pode ser em lista com int E string
+    # ordenacao é in place, ou seja, na propria lista
+    # ordenacao baseada na tabela asc, maiusculo > minusculo
+    # ordem crescente
+    lista1.sort()
+    print(lista1)
+    #ordem decrescente
+    lista1 = ['a', 'f', 'e', 'r', 't']
+    lista1.sort(reverse=True)
+    # ordenar sem considerar tabela asc
+    lista1.sort(key=str.lower)
 
 lista_montada = monta_lista(10)
 print_lista(lista_montada)
@@ -74,5 +93,8 @@ print('novo elemento' in lista_montada)
 print('novo elemento' not in lista_montada)
 concatena_listas()
 multiplica_listas()
+print('Deletando: ')
 deletando_elem()
+print('Atribuicao múltipla')
 atribuicao_multipla()
+ordenacao_lista()
