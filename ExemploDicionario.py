@@ -35,3 +35,9 @@ print(dicionario)
 # agora o valor nao sera alterado pois a chave ja existe
 dicionario.setdefault("chave", 3)
 print(dicionario)
+
+# a ordem dos itens no dicionario nao fazem diferenca
+print({"a": 1, "b": 2, "c": 3} == {"b": 2, "a": 1, "c": 3}) # True
+
+# a ordem dos itens na lista fazem diferenca
+print([1, 2, 3] == [3,2,1]) # False
